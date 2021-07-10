@@ -1,0 +1,27 @@
+{
+  "name": "individual-project",
+  "version": "1.0.0",
+  "description": "individual project mdx",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tok-yoCat/moonbase.git"
+  },
+  "author": "Efe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tok-yoCat/moonbase/issues"
+  },
+  "homepage": "https://github.com/tok-yoCat/moonbase#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.10"
+  }
+}

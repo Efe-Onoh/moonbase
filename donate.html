@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <script src="https://unpkg.com/vue"></script>
+
+        
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel = "stylesheet" href="style.css">
+
+        <title>moonsass</title>
+    </head>
+      
+    <!--HTML BODY-->
+    <body>
+        <div id="app">
+        <header>
+
+           <nav> 
+            <div id="btn-group">
+                <a href="donate.html"><button class="header-button">Place a donation</button></a>
+                <a href="#"><button class="header-button">Subscribe</button></a>
+            </div>
+            
+
+            <div id="logo">
+                <a href="index.html">
+                <svg version="1.1" viewBox="0 0 141 82" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                     <linearGradient id="a" x1="40.749" x2="40.749" y2="81.498" gradientTransform="scale(.99388 1.0062)" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#ffd846" offset="0"/>
+                      <stop stop-color="#ff5434" offset=".492"/>
+                      <stop stop-color="#de0f61" offset="1"/>
+                     </linearGradient>
+                     <linearGradient id="b" x1="41" x2="41" y2="82" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#b73eea" offset="0"/>
+                      <stop stop-color="#de0f61" offset=".492"/>
+                      <stop stop-color="#de0f61" offset="1"/>
+                     </linearGradient>
+                    </defs>
+                    <g transform="translate(-4288.4 767)">
+                     <ellipse transform="translate(4288.4 -767)" cx="40.5" cy="41" rx="40.5" ry="41" style="fill:url(#a)"/>
+                     <circle transform="translate(4347.4 -767)" cx="41" cy="41" r="41" style="fill:url(#b)"/>
+                     <path transform="rotate(180 2184.8 -349.03)" d="m0 27.932a40.72 40.72 0 0111.039-27.932 40.72 40.72 0 0111.039 27.932 40.72 40.72 0 01-11.039 27.932 40.72 40.72 0 01-11.039-27.932z" style="fill:#fff"/>
+                    </g>
+                   </svg>
+                </a>   
+            </div>
+
+            <div id="sign-group">
+                <span class="sign"><a href="signup.html">sign up</a></span><span class="sign">|</span><span class="sign"><a href="signin.html">sign in</a></span>
+            </div>
+            
+            </nav>
+        </header>
+
+        
+        <main>
+            <section id="page-content">
+                <div class="sign-up-form">
+                        <h2>Payment Details</h2>
+                        <form>
+
+                            <div id="payment-type">
+                                <div>
+                                    <label for="payment-type">
+                                        <input id="creditdebit" type="radio" name="paymenttype" checked required>Credit/Debit
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <label for="paymenttype">
+                                        <input id="mobile" type="radio" name="paymenttype" required>Mobile
+                                    </label>
+                                </div>
+
+                            </div>
+
+                            <div>
+    
+                            <input class="form-input" type="text" placeholder="Card name" required>
+
+                            <input class="form-input" type="text" placeholder="Card number" required>
+        
+                            </div>
+                            
+                            <div id="card-date-info" class="row">
+        
+                            <input class="col-sm-4" type="text" placeholder="MM" required>
+        
+                            <input class="col-sm-4" type="text" placeholder="YYYY" required>
+        
+                            <input class="col-sm-4" type="text" placeholder="CVC" required>
+                            
+                            </div>
+    
+                            <button type="submit">Next</button>
+                        
+                        </form>
+                </div>
+    
+                
+            </section>
+    
+            </main>
+
+        </div>
+            <footer>
+                <section class="row">
+                    <div class="col-md-3">
+                        <h2>Sitemap</h2>
+                        <p>
+                            Learn more
+                        </p>
+                        <p>
+                            Submit object
+                        </p>
+                        <p>
+                            Vote
+                        </p>
+                        <p>
+                            Donate
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Contact</h2>
+                        <p>
+                            000-999-888-777
+                        </p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Learn more</h2>
+                        <p>How it works</p>
+                        <p>Frequently asked questions</p>
+                        <p>Regions</p>
+                        <p>Currencies</p>
+                        <p>Become an ambassador</p>
+                    </div>
+                    <div class="col-md-3">
+                        <h2>Resources</h2>
+                        <p>Moonbase press</p>
+                        <p>Help center</p>
+                        <p>Moonbase stories</p>
+                        <p>Careers</p>
+                        <p>About us</p>
+                    </div>
+                </section>
+    
+                <section id="copyright-footer">
+                    <div id="copyright">
+                        <span>copyright 2021&copy moonsass</span>
+                    </div>
+                    <div>
+                        
+                        <a href="#" class="social">
+                            <svg width="36" height="36" version="1.1" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                 <linearGradient id="facebook" x1=".5" x2=".5" y2="1">
+                                  <stop stop-color="#b73eea" offset="0"/>
+                                  <stop stop-color="#6e5be4" offset=".519"/>
+                                  <stop stop-color="#5e52cd" offset="1"/>
+                                 </linearGradient>
+                                </defs>
+                                <path d="M6.573,0A6.559,6.559,0,0,0,0,6.573V29.426A6.559,6.559,0,0,0,6.573,36H18.959V21.926H15.238V16.859h3.721V12.53c0-3.4,2.2-6.524,7.264-6.524a30.691,30.691,0,0,1,3.567.2l-.119,4.732s-1.547-.015-3.234-.015c-1.827,0-2.119.842-2.119,2.239v3.7h5.5l-.24,5.067H24.318V36h5.109A6.559,6.559,0,0,0,36,29.427V6.573A6.559,6.559,0,0,0,29.427,0Z" fill="url(#facebook)"/>
+                               </svg>
+                               
+                        </a>
+                        <a href="#"  class="social">
+                            <svg width="35.968" height="35.956" version="1.1" viewBox="0 0 35.968 35.956" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                 <linearGradient id="instagram" x1="1" x2="0" y1=".5" y2=".5">
+                                  <stop stop-color="#b73eea" offset="0"/>
+                                  <stop stop-color="#6e5be4" offset=".485"/>
+                                  <stop stop-color="#5e52cd" offset="1"/>
+                                 </linearGradient>
+                                </defs>
+                                <path transform="translate(-.016 -.022)" d="m21.729 18.391a3.545 3.545 0 10-3.545 3.529 3.541 3.541 0 003.545-3.529zm5.271-18.369h-17.995a8.979 8.979 0 00-8.989 8.949v2.494h13.227a8.538 8.538 0 019.882 0h12.858v-2.494a8.978 8.978 0 00-8.983-8.949zm3.64 8.512a1 1 0 01-1 .994h-3.09a1 1 0 01-1-.994v-3.073a1 1 0 011-.994h3.086a1 1 0 011 .994zm-3.913 9.857a8.538 8.538 0 01-17.076 0 8.419 8.419 0 01.811-3.611h-10.446v12.249a8.979 8.979 0 008.989 8.949h17.99a8.979 8.979 0 008.989-8.949v-12.25h-10.073a8.422 8.422 0 01.811 3.611z" fill="url(#instagram)"/>
+                               </svg>
+                               
+                        </a>
+                        <a href="#"  class="social">
+                            <svg width="41.596" height="33" version="1.1" viewBox="0 0 41.596 33" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                 <linearGradient id="twitter" x1=".87" x2="0" y1=".5" y2=".5">
+                                  <stop stop-color="#b73eea" offset="0"/>
+                                  <stop stop-color="#6e5be4" offset=".499"/>
+                                  <stop stop-color="#5e52cd" offset="1"/>
+                                 </linearGradient>
+                                </defs>
+                                <path transform="translate(0 -2.999)" d="m41.6 6.861a10.643 10.643 0 01-1.557 2.119 11.343 11.343 0 01-2.805 2.252q.047.353.069.662a23.015 23.015 0 01-1.785 9.2 24.511 24.511 0 01-10.132 11.99c-4.9 2.675-10.6 3.244-15.86 2.759a18.75 18.75 0 01-9.53-3.509 18.4 18.4 0 0012.706-3.488c-3.9.094-6.732-2.59-8.068-5.695a5.694 5.694 0 001.808.088 17.625 17.625 0 002.041-.265 9.508 9.508 0 01-5.8-4.282 8.866 8.866 0 01-.974-4.061 8.448 8.448 0 003.849 1.1 9.409 9.409 0 01-3.779-5.85 10.383 10.383 0 011.046-5.273 29.074 29.074 0 009.9 7.063 21.4 21.4 0 007.771 1.546 9.469 9.469 0 011.04-6.269 8.961 8.961 0 015.36-3.708 8.151 8.151 0 017.93 2.34 14.562 14.562 0 005.518-1.943 8.04 8.04 0 01-3.8 4.679 25.022 25.022 0 005.047-1.456z" fill="url(#twitter)"/>
+                               </svg>
+                               
+                        </a>
+                        <a href="#"  class="social">
+    
+                            <svg width="57.325" height="36" version="1.1" viewBox="0 0 57.325 36" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                 <linearGradient id="mastercard" x1=".5" x2=".5" y2="1">
+                                  <stop stop-color="#b73eea" offset="0"/>
+                                  <stop stop-color="#6e5be4" offset=".505"/>
+                                  <stop stop-color="#5e52cd" offset="1"/>
+                                 </linearGradient>
+                                </defs>
+                                <path transform="translate(0 -7.02)" d="m2.667 7.02a2.667 2.667 0 00-2.667 2.667v30.666a2.667 2.667 0 002.667 2.667h51.99a2.667 2.667 0 002.667-2.667v-30.666a2.667 2.667 0 00-2.666-2.667h-51.991zm16.133 4.333a13.719 13.719 0 018.637 3.04 14.117 14.117 0 00-4.2 6.753h1.145a13.224 13.224 0 013.513-5.664 13.224 13.224 0 013.513 5.664h1.162a14.106 14.106 0 00-4.205-6.713 13.733 13.733 0 11-.118 21.209 14.111 14.111 0 004.417-7.162h-1.119a13.221 13.221 0 01-3.65 6.131 13.221 13.221 0 01-3.646-6.131h-1.066a14.106 14.106 0 004.369 7.068 13.695 13.695 0 11-8.752-24.195zm17.2 9.654c-1.65 0-3.255 1.443-3.255 4.151 0 1.8.866 2.981 2.572 2.981a6.542 6.542 0 001.25-.2l.255-1.568a3.409 3.409 0 01-1.182.355c-1.014 0-1.42-.78-1.42-1.618 0-1.7.873-2.635 1.844-2.635a2.539 2.539 0 011.314.412l.232-1.525a5.076 5.076 0 00-1.61-.353zm13.871.132h-1.435l-.307 1.889a1.9 1.9 0 00-1.382-.732c-1.312 0-2.4 1.557-2.4 3.35 0 1.156.581 2.291 1.774 2.291a1.8 1.8 0 001.333-.589l-.062.5h1.393zm-41.1.019-1.14 6.731h1.377l.871-5.075.129 5.075h.986l1.838-5.075-.815 5.075h1.463l1.129-6.731h-2.265l-1.409 4.129-.073-4.129h-2.088zm14.392.436c-.032.032-.833 4.654-.833 5.218a1.05 1.05 0 001.124 1.2 3.5 3.5 0 001-.172l.053-.014.177-1.2c-.1 0-.239.041-.363.041-.49 0-.546-.261-.514-.455l.4-2.455h.747l.182-1.331h-.7l.143-.828h-1.412zm16.651.677a4.743 4.743 0 00-1.7.317l-.2 1.236a4.335 4.335 0 011.529-.253c.522 0 .9.061.9.494a.948.948 0 01-.046.361s-.412-.035-.6-.035c-1.212 0-2.486.532-2.486 2.131a1.347 1.347 0 001.354 1.548 1.812 1.812 0 001.435-.66l-.046.548h1.234l.554-3.958a1.669 1.669 0 00-1.925-1.732zm-23.154.006a4.778 4.778 0 00-1.705.317l-.2 1.236a4.359 4.359 0 011.533-.253c.524 0 .908.061.908.494a.948.948 0 01-.046.361s-.414-.035-.605-.035c-1.217 0-2.5.53-2.5 2.127a1.349 1.349 0 001.358 1.548 1.824 1.824 0 001.444-.659l-.046.548h1.239l.554-3.954a1.674 1.674 0 00-1.933-1.732zm4.377 0c-1.037 0-2.089.419-2.089 1.847 0 1.619 1.753 1.455 1.753 2.137 0 .455-.489.492-.866.492a4.576 4.576 0 01-1.244-.215l-.188 1.236a4.406 4.406 0 001.573.174c.315 0 2.119.08 2.119-1.8 0-1.756-1.669-1.408-1.669-2.113 0-.352.271-.462.769-.462.2 0 .959.062.959.062l.175-1.248a6.417 6.417 0 00-1.291-.111zm6.478 0c-1.439 0-2.506 1.549-2.506 3.3a2.245 2.245 0 002.475 2.5 3.666 3.666 0 001.516-.237l.252-1.377a4.479 4.479 0 01-1.521.35c-1.538 0-1.268-1.145-1.268-1.145h2.911a10.24 10.24 0 00.188-1.3 1.918 1.918 0 00-2.041-2.089zm5.215.059c-.648 0-1.131.873-1.131.873l.129-.8h-1.344l-.9 5.529h1.489c.422-2.361.5-4.277 1.5-3.927a5.4 5.4 0 01.54-1.653 1.515 1.515 0 00-.279-.019zm12.062 0c-.648 0-1.131.873-1.131.873l.129-.8h-1.344l-.9 5.529h1.487c.422-2.361.5-4.277 1.506-3.927a5.4 5.4 0 01.54-1.653 1.515 1.515 0 00-.279-.019zm-17.281 1.189c.818 0 .669.924.669 1h-1.61c0-.1.153-1 .943-1zm19.46.107c.521 0 .788.352.788 1.178 0 .75-.379 1.753-1.162 1.753-.521 0-.764-.43-.764-1.1 0-1.1.5-1.83 1.139-1.83zm-7.153 1.881a.832.832 0 01.291.03s-.006 0 .014 0c.027.247-.148 1.4-1 1.4a.524.524 0 01-.549-.554c0-.4.209-.881 1.242-.881zm-23.154 0a.88.88 0 01.307.033c.027.247-.15 1.4-1 1.4a.525.525 0 01-.554-.551c0-.4.21-.881 1.247-.881z" fill="url(#mastercard)"/>
+                               </svg>
+                               
+                        </a>
+                        <a href="#"  class="social">
+    
+                            <svg width="117.46" height="36" version="1.1" viewBox="0 0 117.46 36" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                 <linearGradient id="visa" x1="1" x2="0" y1=".5" y2=".5">
+                                  <stop stop-color="#b73eea" offset="0"/>
+                                  <stop stop-color="#6e5be4" offset=".515"/>
+                                  <stop stop-color="#5e52cd" offset="1"/>
+                                 </linearGradient>
+                                </defs>
+                                <path transform="translate(-2.998 -13.402)" d="M88.391,14.878A24.4,24.4,0,0,0,79.871,13.4c-9.4,0-16.032,4.733-16.079,11.53-.059,4.992,4.718,7.807,8.327,9.475,3.708,1.715,4.945,2.8,4.933,4.326-.023,2.333-2.96,3.387-5.693,3.387a20.109,20.109,0,0,1-8.954-1.832l-1.167-.548L59.9,47.562A32.13,32.13,0,0,0,70.557,49.4c9.987,0,16.522-4.706,16.6-11.933.082-3.986-2.5-7-7.94-9.49-3.3-1.617-5.356-2.7-5.356-4.334,0-1.449,1.758-3,5.426-3a17.324,17.324,0,0,1,7.125,1.347l.881.4,1.335-7.556-.227.051Zm24.383-.838h-7.341c-2.286,0-4.005.63-5,2.9L86.312,48.92H96.3l2-5.246,12.192.012c.29,1.229,1.167,5.235,1.167,5.235h8.809l-7.693-34.88Zm-62.5-.294h9.518l-5.955,34.9H44.334l5.943-34.907v.012ZM26.109,32.978l.987,4.843,9.3-23.784H46.479L31.5,48.865H21.442L13.22,19.373a1.993,1.993,0,0,0-.873-1.167A40.8,40.8,0,0,0,3,14.749l.129-.736h15.32c2.079.082,3.755.736,4.311,2.952L26.1,32.994v-.02Zm74.92,3.559,3.794-9.76c-.047.106.783-2.016,1.265-3.324l.654,3.015,2.2,10.066h-7.924v.008h.008Z" fill="url(#visa)"/>
+                               </svg>
+                               
+                        </a>
+                    </div>
+                </section>
+            </footer>
+    
+        
+        
+        
+
+         <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
