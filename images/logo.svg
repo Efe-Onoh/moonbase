@@ -1,0 +1,19 @@
+<svg width="141" height="82" version="1.1" viewBox="0 0 141 82" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x1="40.749" x2="40.749" y2="81.498" gradientTransform="scale(.99388 1.0062)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#ffd846" offset="0"/>
+   <stop stop-color="#ff5434" offset=".492"/>
+   <stop stop-color="#de0f61" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" x1="41" x2="41" y2="82" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#b73eea" offset="0"/>
+   <stop stop-color="#de0f61" offset=".492"/>
+   <stop stop-color="#de0f61" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(-4288.4 767)">
+  <ellipse transform="translate(4288.4 -767)" cx="40.5" cy="41" rx="40.5" ry="41" style="fill:url(#a)"/>
+  <circle transform="translate(4347.4 -767)" cx="41" cy="41" r="41" style="fill:url(#b)"/>
+  <path transform="rotate(180 2184.8 -349.03)" d="m0 27.932a40.72 40.72 0 0111.039-27.932 40.72 40.72 0 0111.039 27.932 40.72 40.72 0 01-11.039 27.932 40.72 40.72 0 01-11.039-27.932z" style="fill:#fff"/>
+ </g>
+</svg>
