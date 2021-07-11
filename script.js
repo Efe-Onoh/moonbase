@@ -162,7 +162,7 @@ var webstore = new Vue({
         },
         access(){
 
-            if(this.username){ //set access to true or false depending on if a username exists
+            if(this.username != ''){ //set access to true or false depending on if a username exists
                 this.access = true;
             }
             else{
