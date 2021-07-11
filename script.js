@@ -15,6 +15,7 @@ var webstore = new Vue({
             password: ''
         },
         username: '',
+        access: false,
         project:{
             category: '',
             desc: '',
@@ -27,7 +28,9 @@ var webstore = new Vue({
 
     created: function() {
 
-        this.username = localStorage.user;
+        //this.username = localStorage.user;
+        
+        
 
         
     },
@@ -133,7 +136,7 @@ var webstore = new Vue({
 
         },
         signOut(){
-            localStorage.user = ''; //reclaim local storage
+            localStorage.user = null; //reclaim local storage
             location.replace("./signin.html");
         },
         validate(){
@@ -156,6 +159,15 @@ var webstore = new Vue({
             return 0;
 
                 
+        },
+        access(){
+
+            if(this.username){ //set access to true or false depending on if a username exists
+                this.access = true;
+            }
+            else{
+                this.access = false;
+            }
         }
     }
 

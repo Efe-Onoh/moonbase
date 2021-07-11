@@ -132,7 +132,7 @@
                    
                 </div>
 
-                <div id="submit-vote" class="hero-section-2">
+                <div id="submit-vote" class="hero-section-2" v-if='validate()'>
                     <div>
                         <a href="submitproject.html"><button id="submit-btn" class="landing-button">Submit Project</button></a>
                         <h5>Next submission period: 20-09-2021</h5>     
@@ -143,6 +143,8 @@
                         <h5>Next voting period: 30-09-2021</h5>
                     </div>
                 </div>
+
+                <div v-else></div>
 
             </section>
 

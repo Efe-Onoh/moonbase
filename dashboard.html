@@ -83,7 +83,7 @@
                    
                 </div>
 
-                <div id="submit-vote" class="hero-section-2">
+                <div id="submit-vote" class="hero-section-2" v-if="access">
                     <div>
                         <a href="submitproject.html"><button id="submit-btn" class="landing-button">Submit Project</button></a>
                         <h5 style="color: #fff;">Next submission period: dd-mm-yy</h5>     
@@ -91,6 +91,18 @@
                     
                     <div>
                         <a href="vote.html"><button class="landing-button vote-btn">Vote Project</button></a>
+                        <h5 style="color: #fff;">Next voting period: dd-mm-yy</h5>
+                    </div>
+                </div>
+
+                <div id="submit-vote" class="hero-section-2" v-else>
+                    <div>
+                        <a href="submitproject.html"><button id="submit-btn" class="landing-button"  style="background-color: gray; " disabled>Submit Project</button></a>
+                        <h5 style="color: #fff;">Next submission period: dd-mm-yy</h5>     
+                    </div>
+                    
+                    <div>
+                        <a href="vote.html"><button class="landing-button vote-btn" style="background-color:gray; color: #fff;" disabled>Vote Project</button></a>
                         <h5 style="color: #fff;">Next voting period: dd-mm-yy</h5>
                     </div>
                 </div>
