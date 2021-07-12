@@ -139,6 +139,7 @@ var webstore = new Vue({
                   .then(result => {
                   alert("project stored successfully");
                   console.log('Success:', result);
+                  
                   })
                   .catch(error => {
                   console.error('Error:', error);
