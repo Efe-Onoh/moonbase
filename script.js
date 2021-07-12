@@ -37,7 +37,7 @@ var webstore = new Vue({
 
     created: function() {
 
-        if(localStorage.user == null){
+        if ((localStorage.user == null)){
             localStorage.clear();
         }
         else{
