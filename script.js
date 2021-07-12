@@ -37,7 +37,14 @@ var webstore = new Vue({
 
     created: function() {
 
-        this.username = localStorage.user;
+        if(localStorage.user == null){
+            localStorage.clear();
+        }
+        else{
+            this.username = localStorage.user;
+
+        }
+        
         
         
 
