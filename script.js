@@ -145,8 +145,8 @@ var webstore = new Vue({
 
         },
         signOut(){
-            localStorage.user = null; //reclaim local storage
-            location.replace("./signin.html");
+            localStorage.clear(); //reclaim local storage
+            location.replace("./index.html");
         },
         validateSignUp(){
 
