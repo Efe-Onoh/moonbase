@@ -91,7 +91,7 @@ var webstore = new Vue({
                             alert("valid email");
                             if (json.password == cred.password)
                                 {
-                                    console.log("password match");
+                                    alert("signing in....");
 
                                     localStorage.user = json.firstName; //local storage not working
                                     location.replace("./dashboard.html");
