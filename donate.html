@@ -69,13 +69,13 @@
                             <div id="payment-type">
                                 <div>
                                     <label for="payment-type">
-                                        <input id="creditdebit" type="radio" name="paymenttype" checked required>Credit/Debit
+                                        <input id="creditdebit" type="radio" name="paymenttype" value="card"checked required v-model="donate.paymenttype">Credit/Debit
                                     </label>
                                 </div>
 
                                 <div>
                                     <label for="paymenttype">
-                                        <input id="mobile" type="radio" name="paymenttype" required>Mobile
+                                        <input id="mobile" type="radio" name="paymenttype" value="mobile" required v-model="donate.paymenttype">Mobile
                                     </label>
                                 </div>
 
@@ -83,12 +83,20 @@
 
                             <div>
     
-                            <input class="form-input" type="text" placeholder="Card name" required>
+                            <div v-if="donate.paymenttype === 'card'">   
+                            <input class="form-input" type="text" placeholder="Card name" required  v-model="cardDetails.cardName">
 
-                            <input class="form-input" type="text" placeholder="Card number" required>
+                            <input class="form-input" type="text" placeholder="Card number" required  v-model="cardDetails.cardNumber">
 
-                            <input class="col-sm-4" type="text" placeholder="MM" required>
-        
+                            <input class="form-input" type="number" placeholder="Amount" required  v-model="donate.amount">
+                            </div>
+
+                            <div v-else>
+                            <input class="form-input" type="tel" placeholder="Phone number" required  v-model="donate.phone">
+
+                            <input class="form-input" type="number" placeholder="Amount" min="1" required  v-model="donate.amount">
+                            </div>
+
                             </div>
                             
                             <div id="card-date-info" class="row">
@@ -101,7 +109,19 @@
                             
                             </div>
     
-                            <button type="submit">Next</button>
+                            
+                            <div v-if="(donate.paymenttype === 'card')">
+                                <button type="button" v-if="validateCard()" v-on:click="successfulAlert('Donation successful')">Submit</button>
+                                <h6 v-else>Invalid card details</h6>
+                            </div>
+
+                            <div v-else>
+                                <button type="button" v-if="validatePhoneNum()" v-on:click="successfulAlert('Donation successful')">Submit</button>
+                                <h6 v-else>enter a valid phone number</h6>
+                            </div>
+                            
+                            <!-- <button type="button" v-else-if="validatePhoneNum() === 1">Submit</button> -->
+                            
                         
                         </form>
                 </div>
@@ -235,7 +255,7 @@
         
 
          <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="script.js"></script>
     </body>
 </html>
