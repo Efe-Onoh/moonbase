@@ -3,6 +3,7 @@ var webstore = new Vue({
     el: '#app',
     data: {
         sitename: 'Moonbase',
+        username: '',
         signup:{
             firstName: '',
             lastName: '',
@@ -14,8 +15,16 @@ var webstore = new Vue({
             email: '',
             password: ''
         },
-        username: '',
-        access: false,
+        
+        donate:{
+            paymenttype: 'card',
+            phone: '',
+            amount: 1,
+        },
+        cardDetails:{
+            cardName: '',
+            cardNumber: '',
+        },
         project:{
             category: '',
             desc: '',
@@ -60,7 +69,7 @@ var webstore = new Vue({
                   })
                   .then(response => response.json())
                   .then(result => {
-                  alert("account created");
+                  alert("Account created successfully");
                   console.log('Success:', result);
                   
                 //   localStorage.user = result.firstName; //local storage not working
@@ -139,14 +148,14 @@ var webstore = new Vue({
             localStorage.user = null; //reclaim local storage
             location.replace("./signin.html");
         },
-        validate(){
+        validateSignUp(){
 
             /*create two regular expressions to check the correct pattern is being entered for name and phone number*/
             //let phoneRegex =  /^[0-9]{9,11}$/g;
             let nameRegex = /^[A-Za-z]+$/ig;
 
             /*create a boolean test to see if phone number and name have been entered and are valid*phoneRegex.test(this.order.phone)&& nameRegex.test(this.order.name)*/
-            let val = (this.signup.firstName != '') && (this.signup.lastName != '') && (this.signup.email != '') && (this.signup.country != '') && (this.signup.password != '');
+            let val = (this.signup.firstName != '') && (this.signup.lastName != '') && (this.signup.email != '') && (this.signup.country != '') && (this.signup.password != '') && (this.validateCard());
 
             console.log(val);
 
@@ -160,6 +169,69 @@ var webstore = new Vue({
 
                 
         },
+
+        validateDonate(){
+           
+            if(this.donate.paymenttype=='card'){
+                return this.validateCard();
+            }
+
+            else{
+               return this.validatePhoneNum();
+    
+            }
+           
+            /*test validity. and return true if valid*/
+            if (val){
+                return 1;    //not entering. why? because of order of eval. stored in a variable and it worked.
+            }
+
+                
+            return 0;
+
+        },
+
+        validatePhoneNum(){
+             /*create two regular expressions to check the correct pattern is being entered for name and phone number*/
+             let phoneRegex =  /^[0-9]{9,11}$/g;
+             /*create a boolean test to see if phone number and name have been entered and are valid*/
+             let val = phoneRegex.test(this.donate.phone) && (this.donate.paymenttype == 'mobile');
+
+             console.log(val);
+
+             /*test validity. and return true if valid*/
+             if (val){
+                 return 1;    //not entering. why? because of order of eval. stored in a variable and it worked.
+             }
+
+                 
+             return 0;
+
+
+        },
+
+        validateCard(){
+            /*create two regular expressions to check the correct pattern is being entered for name and phone number*/
+            let cardNameRegex = /^[A-Za-z]+\s{1}[A-Za-z]+$/ig;
+            let cardNumRegex =  /^[0-9]{3,4}\-?[0-9]{3,4}\-?[0-9]{3,4}\-?[0-9]{3,4}$/g;
+            /*create a boolean test to see if phone number and name have been entered and are valid*/
+            let val = cardNumRegex.test(this.cardDetails.cardNumber) && cardNameRegex.test(this.cardDetails.cardName);
+
+            console.log(val);
+
+            /*test validity. and return true if valid*/
+            if (val){
+                return 1;    //not entering. why? because of order of eval. stored in a variable and it worked.
+            }
+
+                
+            return 0;
+        },
+
+        successfulAlert(x){
+            alert(x);
+        },
+
         access(){
 
             if(this.username != ''){ //set access to true or false depending on if a username exists
@@ -168,7 +240,8 @@ var webstore = new Vue({
             else{
                 this.access = false;
             }
-        }
+        },
+        
     }
 
 })
