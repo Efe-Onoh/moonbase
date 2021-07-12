@@ -88,9 +88,9 @@
 
                     <input class="form-input" type="text" placeholder="State" required>
 
-                    <input class="form-input" type="text" placeholder="Card name" required>
+                    <input class="form-input" type="text" placeholder="Card name"  v-model="cardDetails.cardName" required>
 
-                    <input class="form-input" type="number" placeholder="Card number" required>
+                    <input class="form-input"  placeholder="Card number"  v-model="cardDetails.cardNumber" required>
 
                     
                     <div id="card-date-info" class="row">
@@ -105,7 +105,7 @@
 
                     <div id="submit-btn-group">
                         <button type="button" v-on:click="prevSignUp">Back</button> 
-                        <button type="button" v-on:click="signUpSubmit" v-if='validate()'>Submit</button>
+                        <button type="button" v-on:click="signUpSubmit" v-if='validateSignUp()'>Submit</button>
                         <h6 v-else>Please fill in the required fields</h6>
                     </div>
                     
