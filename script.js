@@ -71,9 +71,10 @@ var webstore = new Vue({
                   .then(result => {
                   alert("Account created successfully");
                   console.log('Success:', result);
+                  localStorage.user = newUser.firstName;
+                  location.replace("./dashboard.html");
                   
-                //   localStorage.user = result.firstName; //local storage not working
-                //   location.replace("./dashboard.html");
+               
                   })
                   .catch(error => {
                   console.error('Error:', error);
@@ -102,7 +103,7 @@ var webstore = new Vue({
                                 {
                                     alert("signing in....");
 
-                                    localStorage.user = json.firstName; //local storage not working
+                                    localStorage.user = json.firstName; 
                                     location.replace("./dashboard.html");
                                     
                                 } 
@@ -112,7 +113,6 @@ var webstore = new Vue({
                         });
                 });
                 
-                // this.username = localStorage.user; //local storage not working
 
         },
 
