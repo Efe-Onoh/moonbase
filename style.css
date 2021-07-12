@@ -110,6 +110,9 @@ main{
     padding: 0px 50px;
 }
 
+#duomoon img{
+    width: 50vw;
+}
 #custom-bg{
     background: url("./images/bgs.svg");
     background-size: 100%;
