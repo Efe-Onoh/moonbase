@@ -112,7 +112,7 @@
                             
                             <div v-if="(donate.paymenttype === 'card')">
                                 <button type="button" v-if="validateCard()" v-on:click="successfulAlert('Successful')">Submit</button>
-                                <h6 v-else>Invalid card details</h6>
+                                <h6 v-else>Invalid card details. Use a valid format</h6>
                             </div>
 
                             <div v-else>
