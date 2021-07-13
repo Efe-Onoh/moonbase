@@ -19,7 +19,7 @@ var webstore = new Vue({
         donate:{
             paymenttype: 'card',
             phone: '',
-            amount: 1,
+            amount: '',
         },
         cardDetails:{
             cardName: '',
